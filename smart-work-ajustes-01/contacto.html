@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacta a Smart Work Capital Humano por WhatsApp, correo o formulario." />
+  <title>Contacto | Smart Work Capital Humano</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo-smart-work.jpeg" />
+</head>
+<body data-page="contacto">
+
+<nav class="navbar" aria-label="Navegación principal">
+  <a class="brand" href="index.html" aria-label="Inicio Smart Work Capital Humano">
+    <img src="assets/logo-smart-work.jpeg" alt="Smart Work Capital Humano" />
+    <span>Smart Work</span>
+  </a>
+
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu">
+    <a href="index.html" data-nav="inicio">Inicio</a>
+    <a href="nosotros.html" data-nav="nosotros">Quiénes somos</a>
+    <a href="servicios.html" data-nav="servicios">Servicios</a>
+    <a href="repse-nomina.html" data-nav="repse-nomina">REPSE y Nómina</a>
+    <a href="bolsa-empleo.html" data-nav="bolsa">Bolsa de empleo</a>
+    <a href="contacto.html" data-nav="contacto">Contacto</a>
+  </div>
+</nav>
+
+
+<header class="page-banner contact-banner">
+  <div class="container reveal">
+    <p class="eyebrow">Contacto</p>
+    <h1>Solicita información o envía tu CV</h1>
+    <p>Escríbenos por WhatsApp, correo o comparte tus datos desde el formulario.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container contact-layout">
+      <div class="contact-card reveal">
+        <p class="eyebrow">Smart Work Capital Humano</p>
+        <h2>Contacto directo</h2>
+        <p>
+          Agenda una conversación para revisar tus vacantes, procesos de nómina, necesidades REPSE
+          o cualquier solución relacionada con recursos humanos.
+        </p>
+
+        <div class="contact-actions">
+          <a class="btn btn-primary js-whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-secondary" href="mailto:capitalhumano@smartwork.mx">Enviar correo</a>
+        </div>
+
+        <div class="contact-lines">
+          <span><strong>WhatsApp:</strong> 56 3089 6635</span>
+          <span><strong>Correo:</strong> capitalhumano@smartwork.mx</span>
+          <span><strong>Ubicación:</strong> CDMX, México</span>
+        </div>
+
+        <div class="social-links" aria-label="Redes sociales">
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="#" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
+        </div>
+      </div>
+
+      <form class="cv-form reveal" id="cvForm" action="https://formsubmit.co/capitalhumano@smartwork.mx" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Nuevo contacto / CV recibido desde Smart Work Capital Humano" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+
+        <label>
+          Nombre completo
+          <input type="text" name="Nombre" placeholder="Tu nombre" required />
+        </label>
+
+        <label>
+          Teléfono / WhatsApp
+          <input type="tel" name="Telefono" placeholder="56 3089 6635" required />
+        </label>
+
+        <label>
+          Correo electrónico
+          <input type="email" name="Correo" placeholder="correo@ejemplo.com" required />
+        </label>
+
+        <label>
+          Tipo de contacto
+          <select name="Tipo de contacto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Empresa interesada en servicios">Empresa interesada en servicios</option>
+            <option value="Candidato / Bolsa de empleo">Candidato / Bolsa de empleo</option>
+          </select>
+        </label>
+
+        <label>
+          Puesto o área de interés
+          <input type="text" name="Puesto o area de interes" placeholder="Ej. Administrativo, Operativo, Ventas..." />
+        </label>
+
+        <label>
+          Adjuntar CV
+          <input id="cvFile" type="file" name="attachment" accept=".pdf,.doc,.docx" />
+          <span class="file-name" id="fileName">Opcional: PDF, DOC o DOCX</span>
+        </label>
+
+        <label>
+          Mensaje
+          <textarea name="Mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Enviar información</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+<a class="floating-whatsapp js-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  WhatsApp
+</a>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <a class="footer-brand" href="index.html">
+      <img src="assets/logo-smart-work.jpeg" alt="Smart Work Capital Humano" />
+      <span>Smart Work Capital Humano</span>
+    </a>
+
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">TikTok</a>
+    </div>
+
+    <p>© <span id="year"></span> Smart Work Capital Humano. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
