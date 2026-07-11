@@ -1,0 +1,26 @@
+ASSETS LIMPIOS - SMART WORK
+
+Archivos conservados con nombre canónico:
+- capital-humano.jpg
+- consultoria-laptop.jpg
+- estudio-socioeconomico.jpg
+- gestion-nominas.jpg
+- logo-smart-work.jpeg
+- psicometricas.jpg
+- reclutamiento-digital.jpg
+- reclutamiento-equipo.jpg
+- reclutamiento.jpg
+- repse-hd.png
+- servicios-rrhh.jpg
+- videologo.mp4
+
+Repetidos eliminados / NO incluidos:
+- 1500x844-reclutamientoequipo(1).jpg (duplicado de reclutamiento-equipo.jpg)
+- digital(1).jpg (duplicado/versión alterna de reclutamiento-digital.jpg)
+- ESTUDIO SOCIOECONÓMICÓ(1).jpg (duplicado/versión alterna de estudio-socioeconomico.jpg)
+- laptop(1).jpg (duplicado/versión alterna de consultoria-laptop.jpg)
+- repse(2).jpg, repse.png, repse-original.jpg (se conserva repse-hd.png)
+- servicios-integrales-rrhh.jpg (se renombró a servicios-rrhh.jpg porque así lo usa el HTML)
+
+Referencias faltantes detectadas:
+- Ninguna
