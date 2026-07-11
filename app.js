@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5215630896635"; // Reemplaza por el WhatsApp real del cliente.
+const WHATSAPP_NUMBER = "525630896635"; // Reemplaza por el WhatsApp real del cliente.
 const WHATSAPP_MESSAGE = "Hola, quiero información sobre los servicios de Smart Work Capital Humano.";
 
 const navToggle = document.querySelector("#navToggle");

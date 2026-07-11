@@ -34,8 +34,8 @@
 <header class="page-banner contact-banner">
   <div class="container reveal">
     <p class="eyebrow">Contacto</p>
-    <h1>Solicita información o envía tu CV</h1>
-    <p>Escríbenos por WhatsApp, correo o comparte tus datos desde el formulario.</p>
+    <h1>Solicita una cotización o envía tu CV</h1>
+    <p>Escríbenos por WhatsApp, correo o comparte tus datos desde el formulario. Todas las solicitudes llegan a capitalhumano@smartwork.mx.</p>
   </div>
 </header>
 
@@ -46,7 +46,7 @@
         <p class="eyebrow">Smart Work Capital Humano</p>
         <h2>Contacto directo</h2>
         <p>
-          Agenda una conversación para revisar tus vacantes, procesos de nómina, necesidades REPSE
+          Agenda una conversación para revisar tus vacantes, solicitar una cotización, enviar tu CV, consultar procesos de nómina, necesidades REPSE
           o cualquier solución relacionada con recursos humanos.
         </p>
 
@@ -69,7 +69,7 @@
       </div>
 
       <form class="cv-form reveal" id="cvForm" action="https://formsubmit.co/capitalhumano@smartwork.mx" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="_subject" value="Nuevo contacto / CV recibido desde Smart Work Capital Humano" />
+        <input type="hidden" name="_subject" value="Nuevo CV o solicitud de cotización desde Smart Work Capital Humano" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
 
@@ -89,11 +89,12 @@
         </label>
 
         <label>
-          Tipo de contacto
-          <select name="Tipo de contacto" required>
+          Tipo de solicitud
+          <select name="Tipo de solicitud" required>
             <option value="">Selecciona una opción</option>
-            <option value="Empresa interesada en servicios">Empresa interesada en servicios</option>
+            <option value="Solicitud de cotización">Solicitud de cotización</option>
             <option value="Candidato / Bolsa de empleo">Candidato / Bolsa de empleo</option>
+            <option value="Empresa interesada en servicios">Empresa interesada en servicios</option>
           </select>
         </label>
 
@@ -110,10 +111,10 @@
 
         <label>
           Mensaje
-          <textarea name="Mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte"></textarea>
+          <textarea name="Mensaje" rows="4" placeholder="Cuéntanos si solicitas una cotización, envías tu CV o necesitas información"></textarea>
         </label>
 
-        <button class="btn btn-primary" type="submit">Enviar información</button>
+        <button class="btn btn-primary" type="submit">Enviar solicitud</button>
       </form>
     </div>
   </section>

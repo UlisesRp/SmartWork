@@ -63,3 +63,10 @@ AJUSTE 11 - MODIFICACIÓN FINAL
 - REPSE quedó con texto específico de informativas cuatrimestrales ICSOE y SISUB.
 - Nómina quedó con texto específico de administración de nómina a la medida.
 - Se añadió cumplimiento REPSE en soluciones integrales.
+
+
+AJUSTE 12 - DATOS FINALES DE CONTACTO
+- Correo receptor del formulario: capitalhumano@smartwork.mx
+- El formulario de contacto ahora contempla CV y solicitudes de cotización.
+- WhatsApp configurado en app.js: 525630896635
+- Teléfono visible: 5630896635
