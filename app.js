@@ -71,3 +71,17 @@ if (cvForm) {
     }
   });
 }
+
+
+// Flip de tarjetas de valores: hover en escritorio y click/tap en móvil.
+document.querySelectorAll(".flip-values .value-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const isOpen = card.classList.contains("is-flipped");
+
+    document.querySelectorAll(".flip-values .value-card.is-flipped").forEach((item) => {
+      if (item !== card) item.classList.remove("is-flipped");
+    });
+
+    card.classList.toggle("is-flipped", !isOpen);
+  });
+});

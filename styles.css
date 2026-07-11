@@ -751,3 +751,243 @@ h3 {
     text-align: center;
   }
 }
+
+
+/* Ajuste 07: flip 3D real para tarjetas de valores */
+.values-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(33, 212, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 88% 26%, rgba(199, 154, 58, 0.16), transparent 30%),
+    linear-gradient(135deg, #061b3d 0%, #0b2f68 48%, #061b3d 100%);
+}
+
+.values-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 90px),
+    linear-gradient(25deg, rgba(33,212,255,0.08) 0 1px, transparent 1px 110px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.values-section .container,
+.values-section .section-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.values-section h2 {
+  color: var(--white);
+}
+
+.values-section .section-heading p:not(.eyebrow) {
+  color: rgba(255,255,255,0.74);
+}
+
+.flip-values {
+  perspective: 1400px;
+}
+
+.flip-values .value-card {
+  min-height: 230px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.flip-values .value-card.reveal.is-visible {
+  transform: none;
+}
+
+.value-card-inner {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  transform-style: preserve-3d;
+  transition: transform 0.72s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.18);
+}
+
+.flip-values .value-card:hover .value-card-inner,
+.flip-values .value-card:focus .value-card-inner,
+.flip-values .value-card:focus-within .value-card-inner,
+.flip-values .value-card.is-flipped .value-card-inner {
+  transform: rotateX(180deg);
+  box-shadow: 0 34px 90px rgba(0,0,0,0.28);
+}
+
+.value-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.34);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.value-front {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.72), transparent 32%),
+    linear-gradient(135deg, rgba(234, 249, 255, 0.98), rgba(96, 197, 237, 0.92));
+}
+
+.value-back {
+  transform: rotateX(180deg);
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,0.22), transparent 34%),
+    linear-gradient(135deg, #0b3f8f 0%, #061b3d 100%);
+  color: var(--white);
+}
+
+.value-face::after {
+  content: "";
+  position: absolute;
+  left: -35%;
+  top: -55%;
+  width: 65%;
+  height: 220%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.38), transparent);
+  transform: rotate(18deg) translateX(-160%);
+  transition: transform 0.86s ease;
+}
+
+.flip-values .value-card:hover .value-face::after,
+.flip-values .value-card:focus .value-face::after,
+.flip-values .value-card:focus-within .value-face::after,
+.flip-values .value-card.is-flipped .value-face::after {
+  transform: rotate(18deg) translateX(420%);
+}
+
+.value-face .value-number {
+  position: absolute;
+  right: -14px;
+  top: -36px;
+  z-index: 0;
+  display: block;
+  margin: 0;
+  color: rgba(11, 63, 143, 0.16);
+  background: transparent;
+  font-size: clamp(8.8rem, 14vw, 13rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.1em;
+}
+
+.value-back .value-number {
+  color: rgba(255,255,255,0.10);
+}
+
+.flip-values .value-card h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 86%;
+  color: #07346f;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  letter-spacing: -0.03em;
+}
+
+.flip-values .value-back h3 {
+  color: var(--gold-soft);
+}
+
+.flip-values .value-card p {
+  position: relative;
+  z-index: 2;
+  max-height: none;
+  margin: 12px 0 0;
+  overflow: visible;
+  color: rgba(255,255,255,0.9);
+  opacity: 1;
+  transform: none;
+  font-weight: 650;
+}
+
+@media (max-width: 640px) {
+  .flip-values .value-card,
+  .value-card-inner {
+    min-height: 220px;
+  }
+
+  .value-card-inner {
+    height: 220px;
+  }
+
+  .value-face .value-number {
+    right: -8px;
+    top: -24px;
+    font-size: 8rem;
+  }
+}
+
+
+/* Ajuste 08: números grandes más visibles en tarjetas flip */
+.flip-values .value-face .value-number {
+  position: absolute !important;
+  right: -10px !important;
+  top: -28px !important;
+  z-index: 1 !important;
+  display: block !important;
+  margin: 0 !important;
+  color: rgba(11, 63, 143, 0.28) !important;
+  background: transparent !important;
+  font-size: clamp(9.4rem, 15vw, 13.6rem) !important;
+  font-weight: 900 !important;
+  line-height: 0.9 !important;
+  letter-spacing: -0.1em !important;
+  pointer-events: none !important;
+}
+
+.flip-values .value-back .value-number {
+  color: rgba(255,255,255,0.18) !important;
+}
+
+.flip-values .value-card h3,
+.flip-values .value-card p {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 640px) {
+  .flip-values .value-face .value-number {
+    right: -4px !important;
+    top: -16px !important;
+    font-size: 8.4rem !important;
+  }
+}
+
+
+/* Ajuste 10: números un poco más al centro para que se vean mejor */
+.flip-values .value-face .value-number {
+  right: clamp(18px, 4.5vw, 46px) !important;
+  top: -18px !important;
+  color: rgba(11, 63, 143, 0.30) !important;
+  font-size: clamp(8.8rem, 13vw, 12.8rem) !important;
+}
+
+.flip-values .value-back .value-number {
+  right: clamp(18px, 4.5vw, 46px) !important;
+  top: -18px !important;
+  color: rgba(255,255,255,0.18) !important;
+}
+
+@media (max-width: 640px) {
+  .flip-values .value-face .value-number,
+  .flip-values .value-back .value-number {
+    right: 18px !important;
+    top: -12px !important;
+    font-size: 7.8rem !important;
+  }
+}
