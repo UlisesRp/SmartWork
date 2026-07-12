@@ -135,3 +135,8 @@ FIX FINAL REPSE/NÓMINA - TARJETAS
 - Ventajas del servicio usa servicios-rrhh.jpg.
 - Asesoría y regularización usa consultoria-laptop.jpg.
 - Se quitó la repetición visual donde la primera y segunda tarjeta usaban la misma imagen.
+
+
+CORRECCIÓN ÚLTIMO CAMBIO NÓMINA
+- Se conserva "Nómina, IMSS y seguridad social".
+- Solo se cambió el H2 "Nómina a la medida" por "Administración de nómina con enfoque profesional".
